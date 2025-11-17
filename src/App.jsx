@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Calendar, ChevronRight, Menu, X, MessageCircle } from 'lucide-react';
+import whatsAppicon from './assets/whatsapp-brands-solid-full.svg'
 
 export default function DentalPortfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -77,26 +78,26 @@ export default function DentalPortfolio() {
   return (
     <div id="home" className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-50  scroll-smooth ">
       {/* Header */}
-      <header  className="bg-white shadow-md sticky top-0 z-50">
-        <div  className="max-w-full px-4 sm:px-6 lg:px-12">
+      <header className="bg-white shadow-md sticky top-0 z-50">
+        <div className="max-w-full px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center py-4">
             <div>
               <h1 className="md:text-2xl  sm:text-[15rem]  font-bold text-teal-700">Dr. Nithin's Dental Care</h1>
               <p className="text-sm text-gray-600">Excellence in Dental Healthcare</p>
             </div>
-            
+
             {/* Desktop Nav */}
             <nav className="hidden md:flex md:space-x-4 lg:space-x-8">
-<a href="#home" className="font-semibold text-gray-700 hover:text-teal-600 transition-colors md:text-[.90rem] lg:text-[1rem]" >Home</a>      
-        <a href="#experts" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Our Experts</a>
+              <a href="#home" className="font-semibold text-gray-700 hover:text-teal-600 transition-colors md:text-[.90rem] lg:text-[1rem]" >Home</a>
+              <a href="#experts" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Our Experts</a>
               <a href="#clinics" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Clinics</a>
               <a href="#services" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Services</a>
               <a href="#contact" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Contact</a>
-           
+
             </nav>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="md:hidden text-teal-600 bg-white p-2 rounded-lg shadow-md hover:bg-teal-50 transition"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
@@ -118,7 +119,7 @@ export default function DentalPortfolio() {
       </header>
 
       {/* Hero Section */}
-      <section  className="relative bg-gradient-to-r from-teal-600 to-blue-600 text-white py-20 scroll-smooth ">
+      <section className="relative bg-gradient-to-r from-teal-600 to-blue-600 text-white py-20 scroll-smooth">
         <div className="max-w-full px-4 sm:px-6 lg:px-12 text-center py-10">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">Your Smile, Our Priority</h2>
           <p className="text-xl mb-8 text-teal-50">Comprehensive dental care across two premium locations</p>
@@ -135,8 +136,8 @@ export default function DentalPortfolio() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Meet Dr. Nithin Neeps</h2>
             <div className="w-24 h-1 bg-teal-600 mx-auto mb-6"></div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              With over 15 years of experience in general and cosmetic dentistry, Dr. Nithin Neeps is committed to 
-              providing world-class dental care. Leading two state-of-the-art clinics, he brings expertise, 
+              With over 15 years of experience in general and cosmetic dentistry, Dr. Nithin Neeps is committed to
+              providing world-class dental care. Leading two state-of-the-art clinics, he brings expertise,
               compassion, and the latest dental technology to every patient.
             </p>
           </div>
@@ -144,28 +145,28 @@ export default function DentalPortfolio() {
       </section>
 
       {/* Our Experts Section */}
-      <section id="experts" className="py-16 bg-gray-50">
+      <section id="experts" className="pt-30 pb-16 bg-gray-50">
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4">Our Experts</h2>
           <div className="w-24 h-1 bg-teal-600 mx-auto mb-12"></div>
-          
+
           <div className="space-y-16">
             {experts.map((expert, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className={`flex flex-col ${idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 bg-white rounded-2xl shadow-lg p-8 hover:shadow-2xl transition-shadow duration-300`}
               >
                 {/* Image */}
                 <div className="flex-shrink-0">
                   <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-teal-500 shadow-xl">
-                    <img 
-                      src={expert.image} 
+                    <img
+                      src={expert.image}
                       alt={expert.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
                 </div>
-                
+
                 {/* Details */}
                 <div className="flex-1 text-center md:text-left">
                   <h3 className="text-2xl sm:text-3xl font-bold text-teal-700 mb-2">{expert.name}</h3>
@@ -181,29 +182,27 @@ export default function DentalPortfolio() {
       </section>
 
       {/* Clinics Section */}
-      <section id="clinics" className="py-16 bg-white">
+      <section id="clinics" className="pt-30 pb-16 bg-white">
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Our Clinics</h2>
-          
+
           {/* Clinic Tabs */}
           <div className="flex justify-center mb-8 space-x-4">
             <button
               onClick={() => setSelectedClinic('stmarys')}
-              className={`px-6 py-3 rounded-lg font-semibold transition ${
-                selectedClinic === 'stmarys'
-                  ? 'bg-teal-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
+              className={`px-6 py-3 rounded-lg font-semibold transition ${selectedClinic === 'stmarys'
+                ? 'bg-teal-600 text-white'
+                : 'bg-white text-gray-700 hover:bg-gray-100'
+                }`}
             >
               St Mary's Dental Clinic
             </button>
             <button
               onClick={() => setSelectedClinic('clove')}
-              className={`px-6 py-3 rounded-lg font-semibold transition ${
-                selectedClinic === 'clove'
-                  ? 'bg-teal-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100'
-              }`}
+              className={`px-6 py-3 rounded-lg font-semibold transition ${selectedClinic === 'clove'
+                ? 'bg-teal-600 text-white'
+                : 'bg-white text-gray-700 hover:bg-gray-100'
+                }`}
             >
               Clove Clinic
             </button>
@@ -212,7 +211,7 @@ export default function DentalPortfolio() {
           {/* Clinic Details */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-teal-700 mb-6">{clinics[selectedClinic].name}</h3>
-            
+
             {/* Contact Info */}
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-start space-x-3">
@@ -275,13 +274,13 @@ export default function DentalPortfolio() {
                 Location
               </h4>
               <div className="rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                <iframe 
+                <iframe
                   src={clinics[selectedClinic].mapEmbed}
-                  width="100%" 
-                  height="400" 
-                  style={{border: 0}} 
+                  width="100%"
+                  height="400"
+                  style={{ border: 0 }}
                   allowFullScreen={true}
-                  loading="lazy" 
+                  loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title={`${clinics[selectedClinic].name} Location`}
                 ></iframe>
@@ -292,7 +291,7 @@ export default function DentalPortfolio() {
       </section>
 
       {/* Services Section */}
-      <section id="services"   className="py-16 bg-gray-50 ">
+      <section id="services" className="pt-30 pb-16 bg-gray-50 ">
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -332,14 +331,14 @@ export default function DentalPortfolio() {
       </footer>
 
       {/* WhatsApp Floating Button */}
-      <a 
-        href="https://wa.me/916238322874?text=Hi%2C%20I%20am%20interested%20in%20your%20service" 
+      <a
+        href="https://wa.me/916238322874?text=Hi%2C%20I%20am%20interested%20in%20your%20service"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center group"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center group"
         aria-label="Contact us on WhatsApp"
       >
-        <MessageCircle size={28} className="animate-pulse" />
+        <img src={whatsAppicon} alt="WhatsApp" className="w-10 h-10 animate-pulse" />
         <span className="absolute right-full mr-3 bg-gray-900 text-white px-3 py-2 rounded-lg text-sm font-semibold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           Chat on WhatsApp
         </span>
