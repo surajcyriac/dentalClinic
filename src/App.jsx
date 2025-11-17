@@ -75,28 +75,29 @@ export default function DentalPortfolio() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-50 scroll-smooth">
+    <div id="home" className="min-h-screen bg-gradient-to-br from-blue-50 to-teal-50  scroll-smooth ">
       {/* Header */}
-      <header className="bg-white shadow-md sticky top-0 z-50">
-        <div className="max-w-full px-4 sm:px-6 lg:px-12">
+      <header  className="bg-white shadow-md sticky top-0 z-50">
+        <div  className="max-w-full px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center py-4">
             <div>
-              <h1 className="text-xs  font-bold text-teal-700">Dr. Nithin's Dental Care</h1>
+              <h1 className="md:text-2xl  sm:text-[15rem]  font-bold text-teal-700">Dr. Nithin's Dental Care</h1>
               <p className="text-sm text-gray-600">Excellence in Dental Healthcare</p>
             </div>
             
             {/* Desktop Nav */}
-            <nav className="hidden md:flex space-x-8">
-              <a href="#home" className="text-gray-700 hover:text-teal-600 transition">Home</a>
-              <a href="#experts" className="text-gray-700 hover:text-teal-600 transition">Our Experts</a>
-              <a href="#clinics" className="text-gray-700 hover:text-teal-600 transition">Clinics</a>
-              <a href="#services" className="text-gray-700 hover:text-teal-600 transition">Services</a>
-              <a href="#contact" className="text-gray-700 hover:text-teal-600 transition">Contact</a>
+            <nav className="hidden md:flex md:space-x-4 lg:space-x-8">
+<a href="#home" className="font-semibold text-gray-700 hover:text-teal-600 transition-colors md:text-[.90rem] lg:text-[1rem]" >Home</a>      
+        <a href="#experts" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Our Experts</a>
+              <a href="#clinics" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Clinics</a>
+              <a href="#services" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Services</a>
+              <a href="#contact" className="font-semibold text-gray-700 hover:text-teal-600 transition md:text-[.90rem] lg:text-[1rem]">Contact</a>
+           
             </nav>
 
             {/* Mobile Menu Button */}
             <button 
-              className="md:hidden text-gray-700"
+              className="md:hidden text-teal-600 bg-white p-2 rounded-lg shadow-md hover:bg-teal-50 transition"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -106,7 +107,7 @@ export default function DentalPortfolio() {
           {/* Mobile Nav */}
           {mobileMenuOpen && (
             <nav className="md:hidden pb-4 space-y-2">
-              <a href="#home" className="block text-gray-700 hover:text-teal-600 transition py-2">Home</a>
+              <a href="#home" className="block text-gray-700 hover:text-teal-600 transition py-2  ">Home</a>
               <a href="#experts" className="block text-gray-700 hover:text-teal-600 transition py-2">Our Experts</a>
               <a href="#clinics" className="block text-gray-700 hover:text-teal-600 transition py-2">Clinics</a>
               <a href="#services" className="block text-gray-700 hover:text-teal-600 transition py-2">Services</a>
@@ -117,8 +118,8 @@ export default function DentalPortfolio() {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="relative bg-gradient-to-r from-teal-600 to-blue-600 text-white py-20">
-        <div className="max-w-full px-4 sm:px-6 lg:px-12 text-center">
+      <section  className="relative bg-gradient-to-r from-teal-600 to-blue-600 text-white py-20 scroll-smooth ">
+        <div className="max-w-full px-4 sm:px-6 lg:px-12 text-center py-10">
           <h2 className="text-4xl sm:text-5xl font-bold mb-4">Your Smile, Our Priority</h2>
           <p className="text-xl mb-8 text-teal-50">Comprehensive dental care across two premium locations</p>
           <a href="#clinics" className="inline-flex items-center bg-white text-teal-600 px-8 py-3 rounded-full font-semibold hover:bg-teal-50 transition">
@@ -291,7 +292,7 @@ export default function DentalPortfolio() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-16 bg-gray-50">
+      <section id="services"   className="py-16 bg-gray-50 ">
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -306,7 +307,8 @@ export default function DentalPortfolio() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
+      {/* <section id="contact" className="py-16 bg-gradient-to-r from-teal-600 to-blue-600 text-white"> */}
+      <section id="contact" className="py-16 bg-blue-900 text-white">
         <div className="max-w-full px-4 sm:px-6 lg:px-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Transform Your Smile?</h2>
           <p className="text-xl mb-8 text-teal-50">Book your appointment at either of our convenient locations</p>
