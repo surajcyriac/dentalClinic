@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Calendar, ChevronRight, Menu, X, MessageCircle } from 'lucide-react';
 import whatsAppicon from './assets/whatsapp-brands-solid-full.svg'
+import TextType from './components/TextType';
+import nithin from './assets/nithin.png';
 
 export default function DentalPortfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -120,26 +122,57 @@ export default function DentalPortfolio() {
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-teal-600 to-blue-600 text-white py-20 scroll-smooth">
-        <div className="max-w-full px-4 sm:px-6 lg:px-12 text-center py-10">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-4">Your Smile, Our Priority</h2>
-          <p className="text-xl mb-8 text-teal-50">Comprehensive dental care across two premium locations</p>
-          <a href="#clinics" className="inline-flex items-center bg-white text-teal-600 px-8 py-3 rounded-full font-semibold hover:bg-teal-50 transition">
-            Book Appointment <ChevronRight className="ml-2" size={20} />
+        <div className="max-w-full px-4 sm:px-6 lg:px-12 text-right pt-10">
+          
+<TextType 
+  text={["Your Smile", "Our Priority", "Book appoinment now!"]}
+  typingSpeed={100}
+  pauseDuration={1500}
+  showCursor={true}
+  cursorCharacter="|"
+  className="text-4xl sm:text-5xl font-bold mb-15"
+/>
+          {/* <h2 className="text-4xl sm:text-5xl font-bold mb-4">Your Smile, Our Priority</h2> */}
+          <p className="font-semibold text-xl mb-1 text-teal-50">Comprehensive dental care across two premium locations</p>
+          <p className="font-semibold text-xl mb-2 text-teal-50">Comprehensive dental care</p>
+          <a href="#clinics" className="mt-5 inline-flex items-center bg-white text-teal-600 px-8 py-3 rounded-full font-semibold hover:bg-teal-50 transition">
+            Book Appointment <ChevronRight className="ml-2 " size={20} />
           </a>
         </div>
       </section>
 
       {/* About Dr. Nithin */}
+      {/* About Dr. Nithin */}
       <section className="py-16 bg-white">
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">Meet Dr. Nithin Neeps</h2>
-            <div className="w-24 h-1 bg-teal-600 mx-auto mb-6"></div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              With over 15 years of experience in general and cosmetic dentistry, Dr. Nithin Neeps is committed to
-              providing world-class dental care. Leading two state-of-the-art clinics, he brings expertise,
-              compassion, and the latest dental technology to every patient.
-            </p>
+          <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-800 mb-4 border ">Meet Dr. Nithin Neeps</h2>
+          
+          <div className="flex flex-col md:flex-row items-center gap-8 max-w-6xl mx-auto">
+            {/* Portrait Image */}
+            <div className="flex-shrink-0">
+              <div className="w-80 h-106 rounded-2xl   ">
+                <img 
+                  src={nithin} 
+                  alt="Dr. Nithin Neeps"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Text Content */}
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-2xl font-bold text-teal-700 mb-4">Chief Dental Surgeon</h3>
+              <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                With over 15 years of experience in general and cosmetic dentistry, Dr. Nithin Neeps is committed to
+                providing world-class dental care. Leading two state-of-the-art clinics, he brings expertise,
+                compassion, and the latest dental technology to every patient.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Dr. Neeps specializes in advanced dental procedures including smile makeovers, dental implants, and 
+                cosmetic restorations. His patient-centered approach and dedication to excellence have made him a 
+                trusted name in dental care.
+              </p>
+            </div>
           </div>
         </div>
       </section>
