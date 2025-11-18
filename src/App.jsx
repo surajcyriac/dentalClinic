@@ -81,7 +81,7 @@ export default function DentalPortfolio() {
         <div  className="max-w-full px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center py-4">
             <div>
-              <h1 className="md:text-2xl  sm:text-[15rem]  font-bold text-teal-700">Dr. Nithin's Dental Care</h1>
+              <h1 className="md:text-4xl  sm:text-[15rem]  font-bold text-teal-700">Dr. Nithin's Dental Care</h1>
               <p className="text-sm text-gray-600">Excellence in Dental Healthcare</p>
             </div>
             
