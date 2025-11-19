@@ -7,6 +7,8 @@ import stethoscopeIcon from './assets/stethoscopeIcon.svg';
 import verifiedIcon from './assets/verified-check-svgrepo-com.svg';
 import peopleIcon from './assets/users-solid-full.svg';
 import successIcon from './assets/care-treatment-heart-svgrepo-com.svg';
+import CountUp from './components/countup/Countup.jsx'
+import CircularText from './components/circulartext/CircularText.jsx';
 
 export default function DentalPortfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -89,7 +91,7 @@ export default function DentalPortfolio() {
   ];
 
   return (
-    <div id="home" className="min-h-screen bg-[#F4F4F4]  scroll-smooth ">
+    <div id="home" className="min-h-screen bg-[#f4f4f4]  scroll-smooth ">
       {/* Header */}
       <header className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
@@ -154,7 +156,7 @@ export default function DentalPortfolio() {
 
       {/* About Dr. Nithin */}
       {/* About Dr. Nithin */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-[#f4f4f4]">
         <div className="max-w-full px-4 sm:px-6 lg:px-12 ">
 
           <div className="flex flex-col md:flex-row items-center gap-20 max-w-6xl mx-auto ">
@@ -194,7 +196,16 @@ export default function DentalPortfolio() {
           <div key={index} className='flex flex-row gap-4 '>
             <img src={iconObj.icon} alt="" className='w-18 h-18'/>
             <div className="flex flex-col justify-between">
-              <h1 className='text-4xl font-bold text-[#2B2B25]'>{iconObj.number}</h1>
+              {/* <h1 className='text-4xl font-bold text-[#2B2B25]'>{iconObj.number}</h1> */}
+
+<CountUp
+  from={0}
+  to={iconObj.number}
+  separator=","
+  direction="up"
+  duration={1}
+  className="count-up-text text-4xl font-bold text-[#2B2B25]"
+/>
               <h3 className='text-lg font-medium text-[#2B2B25]'>{iconObj.title}</h3>
               </div>
           </div>
@@ -240,7 +251,7 @@ export default function DentalPortfolio() {
       </section>
 
       {/* Clinics Section */}
-      <section id="clinics" className="pt-30 pb-16 bg-white">
+      <section id="clinics" className="pt-30 pb-16bg-[#f4f4f4] my-5">
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#2B2B25] mb-4">Our Clinics</h2>
           <div className="w-24 h-1 bg-[#5F5F55] mx-auto mb-12"></div>
@@ -248,18 +259,18 @@ export default function DentalPortfolio() {
           <div className="flex justify-center mb-8 space-x-4">
             <button
               onClick={() => setSelectedClinic('stmarys')}
-              className={`px-6 py-3 rounded-lg font-semibold transition ${selectedClinic === 'stmarys'
-                ? 'bg-[#5F5F55] text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+              className={`px-6 text-xl py-3 rounded-lg  transition ${selectedClinic === 'stmarys'
+                ? 'bg-[#5F5F55] text-white font-bold'
+                : 'bg-white text-gray-700 hover:bg-gray-100 font-semibold'
                 }`}
             >
               St Mary's Dental Clinic
             </button>
             <button
               onClick={() => setSelectedClinic('clove')}
-              className={`px-6 py-3 rounded-lg font-semibold transition ${selectedClinic === 'clove'
-                ? 'bg-[#5F5F55] text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-100'
+              className={`px-6 text-xl py-3 rounded-lg transition ${selectedClinic === 'clove'
+                ? 'bg-[#5F5F55] text-white font-bold'
+                : 'bg-white text-gray-700 hover:bg-gray-100 font-semibold'
                 }`}
             >
               Clove Clinic
@@ -268,28 +279,28 @@ export default function DentalPortfolio() {
 
           {/* Clinic Details */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
-            <h3 className="text-2xl font-bold text-[#5F5F55] mb-6">{clinics[selectedClinic].name}</h3>
+            <h3 className="text-3xl font-bold text-[#5F5F55] mb-6">{clinics[selectedClinic].name}</h3>
 
             {/* Contact Info */}
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-start space-x-3">
                 <MapPin className="text-[#5F5F55] mt-1 flex-shrink-0" size={20} />
                 <div>
-                  <p className="font-bold text-[#2B2B25]">Address</p>
+                  <p className="font-bold text-[#2B2B25] text-lg">Address</p>
                   <p className="text-[#2B2B25] text-sm font-semibold">{clinics[selectedClinic].address}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Phone className="text-[#5F5F55] mt-1 flex-shrink-0" size={20} />
                 <div>
-                  <p className="font-bold text-[#2B2B25]">Phone</p>
+                  <p className="font-bold text-[#2B2B25] text-lg">Phone</p>
                   <p className="text-[#2B2B25] text-sm font-semibold">{clinics[selectedClinic].phone}</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="text-[#5F5F55] mt-1 flex-shrink-0" size={20} />
                 <div>
-                  <p className="font-bold text-[#2B2B25]">Email</p>
+                  <p className="font-bold text-[#2B2B25] text-lg">Email</p>
                   <p className="text-[#2B2B25] text-sm font-semibold">{clinics[selectedClinic].email}</p>
                 </div>
               </div>
@@ -306,7 +317,7 @@ export default function DentalPortfolio() {
                   <div key={idx} className="border border-gray-200 rounded-lg p-4 hover:border-[#5F5F55] transition">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
                       <div className="mb-2 sm:mb-0">
-                        <h5 className="font-bold text-[#2B2B25]">{doctor.name}</h5>
+                        <h5 className="font-bold text-[#2B2B25] text-lg">{doctor.name}</h5>
                         <p className="text-sm text-[#5F5F55]">{doctor.specialization}</p>
                       </div>
                       <div className="text-sm">
@@ -349,11 +360,11 @@ export default function DentalPortfolio() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="pt-30 pb-16 bg-gray-50 ">
+      <section id="services" className="pt-30 pb-16 bg-white rounded-3xl  ">
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-[#2B2B25] mb-4">Our Services</h2>
           <div className="w-24 h-1 bg-[#5F5F55] mx-auto mb-12"></div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 ">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6  ">
             {services.map((service, idx) => (
               <div key={idx} className="bg-white p-6  rounded-xl border border-[#2B2B25] hover:border-[#5F5F55] hover:shadow-2xl transition-all duration-300 group">
                 <h3 className="font-bold text-lg text-[#2B2B25] mb-3 group-hover:scale-105 transition-transform duration-300">{service.title}</h3>
@@ -369,7 +380,15 @@ export default function DentalPortfolio() {
       <section id="contact" className="py-16 bg-[#2B2B25] text-white">
         <div className="max-w-full px-4 sm:px-6 lg:px-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Transform Your Smile?</h2>
-          <p className="text-xl mb-8 text-teal-50">Book your appointment at either of our convenient locations</p>
+          <p className="text-xl mb-8 text-teal-50">Book your appointment at either of your convenient locations</p>
+          <div>
+  
+<CircularText
+  text="dr Nithins Dental Clinincs - "
+  onHover="speedUp"
+  spinDuration={20}
+  className="custom-class"
+/></div>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
             <a href="tel:+919876543210" className="bg-white text-[#2B2B25] px-8 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition">
               Call St Mary's: +91 98765 43210
