@@ -199,12 +199,14 @@ export default function DentalPortfolio() {
               <a
                 href="#home"
                 className="font-semibold text-[#2B2B25] hover:text-[#5F5F55] transition-colors md:text-[.90rem] lg:text-[1rem]"
+                
               >
                 Home
               </a>
               <a
                 href="#experts"
-                className="font-semibold text-[#2B2B25]0 hover:text-[#5F5F55] transition md:text-[.90rem] lg:text-[1rem]"
+                className="font-semibold text-[#2B2B25] hover:text-[#5F5F55] transition md:text-[.90rem] lg:text-[1rem]"
+                
               >
                 Our Experts
               </a>
@@ -243,30 +245,35 @@ export default function DentalPortfolio() {
               <a
                 href="#home"
                 className="block text-[#2B2B25] hover:text-[#5F5F55] transition py-2  "
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </a>
               <a
                 href="#experts"
                 className="block text-[#2B2B25] hover:text-[#5F5F55] transition py-2"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Our Experts
               </a>
               <a
                 href="#clinics"
                 className="block text-[#2B2B25] hover:text-[#5F5F55] transition py-2"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Clinics
               </a>
               <a
                 href="#services"
                 className="block text-[#2B2B25] hover:text-[#5F5F55] transition py-2"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </a>
               <a
                 href="#contact"
                 className="block text-[#2B2B25] hover:text-[#5F5F55] transition py-2"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </a>
@@ -284,17 +291,17 @@ export default function DentalPortfolio() {
             pauseDuration={1500}
             showCursor={true}
             cursorCharacter="|"
-            className="md:text-6xl text-[1.5rem] font-bold mb-4"
+            className="md:text-6xl text-[1.7rem] font-bold md:mb-4 md:2"
           />
           {/* <h2 className="text-4xl sm:text-5xl font-bold mb-4">Your Smile, Our Priority</h2> */}
-          <p className="font-semibold text-[.9rem] md:text-xl  text-teal-50">
+          <p className="font-semibold text-[.8rem] md:text-xl  text-teal-50">
             Comprehensive dental care across two premium locations
          <br />
             Comprehensive dental care
           </p>
           <a
             href="#clinics"
-            className="mt-5 inline-flex items-center bg-white text-[#5F5F55] px-8 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition"
+            className="md:mt-5 mt-8 inline-flex items-center bg-white text-[#5F5F55] md:px-8 md:py-3 px-4 py-2 rounded-full font-semibold md:text-lg text-sm hover:bg-[#e3e3e0] transition"
           >
             Book Appointment <ChevronRight className="ml-2 " size={20} />
           </a>
@@ -305,7 +312,7 @@ export default function DentalPortfolio() {
       {/* About Dr. Nithin */}
       <section className="py-16 bg-[#f4f4f4]">
         <div className="max-w-full px-4 sm:px-6 lg:px-12 ">
-          <div className="flex flex-col md:flex-row items-center gap-20 max-w-6xl mx-auto ">
+          <div className="flex flex-col md:flex-row items-center md:gap-20 gap-5 max-w-6xl mx-auto ">
             {/* Portrait Image */}
             <div className="flex-shrink-0 ">
               <div className="w-80 h-106 ">
@@ -345,10 +352,10 @@ export default function DentalPortfolio() {
       </section>
 
       <section className="bg-gray-100 flex flex-col items-center py-5 ">
-        <div className=" py-5 flex flex-col md:flex-row justify-evenly  border w-full  gap-5 ">
+        <div className=" py-5 flex flex-col md:flex-row justify-evenly   w-full  gap-5 ">
           {icons.map((iconObj, index) => (
-            <div key={index} className="flex flex-row gap-4  justify-center ">
-              <img src={iconObj.icon} alt="" className="w-18 h-18" />
+            <div key={index} className="flex flex-row gap-4  md:justify-center justify-center mx-4  items-center bg-white p-5 rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ">
+              <img src={iconObj.icon} alt="" className="lg:w-18 lg:h-18 w-12 h-12" />
               <div className="flex flex-col justify-between">
                 {/* <h1 className='text-4xl font-bold text-[#2B2B25]'>{iconObj.number}</h1> */}
 
@@ -358,9 +365,9 @@ export default function DentalPortfolio() {
                   separator=","
                   direction="up"
                   duration={1}
-                  className="count-up-text text-4xl font-bold text-[#2B2B25]"
+                  className="count-up-text lg:text-4xl text-2xl font-bold text-[#2B2B25]"
                 />
-                <h3 className="text-lg font-medium text-[#2B2B25]">
+                <h3 className="lg:text-lg text-md font-medium text-[#2B2B25]">
                   {iconObj.title}
                 </h3>
               </div>
@@ -587,15 +594,15 @@ export default function DentalPortfolio() {
          
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
            
-            Ready to Transform Your Smile?
+            Ready to <span className="text-[#feba0c]">Transform</span> Your Smile?
           </h2>
-          <p className="text-xl mb-8 text-teal-50">
+          <p className="md:text-xl text-lg mb-8 text-teal-50">
            
             Book your appointment at either of your convenient locations
           </p>
           <div className="flex  flex-col lg:flex-row justify-between ">
            
-            <div className="flex flex-col lg:flex-row gap-20 xl:gap-60 justify-between ">
+            <div className="flex flex-col lg:flex-row gap-10 xl:gap-60 justify-between ">
              
               <CircularText
                 text="Dr Nithins Dental Clinincs - "
@@ -679,11 +686,11 @@ export default function DentalPortfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1a1a18] text-white py-8">
+      <footer className="bg-[#1a1a18] text-white md:py-8 py-4">
         <div className="max-w-full px-4 sm:px-6 lg:px-12 text-center">
-          <p>&copy; 2024 Dr. Nithin's Dental Care. All rights reserved.</p>
-          <p className="mt-2 text-sm">
-            Providing exceptional dental care across two premium locations
+          <p className="md:text-lg text-[.9rem] text-gray-400">&copy; 2024 Dr. Nithin's Dental Care. All rights reserved.</p>
+          <p className="mt-2 md:text-xs text-[.7rem] text-gray-400">
+            Providing exceptional dental care at two premium locations
           </p>
         </div>
       </footer>
