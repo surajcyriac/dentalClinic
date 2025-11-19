@@ -19,8 +19,7 @@ import peopleIcon from "./assets/users-solid-full.svg";
 import successIcon from "./assets/care-treatment-heart-svgrepo-com.svg";
 import CountUp from "./components/countup/Countup.jsx";
 import CircularText from "./components/circulartext/CircularText.jsx";
-                import { Facebook, Instagram, Twitter } from "lucide-react";
-
+import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6"; // Using the latest Font Awesome version (Fa6)
 export default function DentalPortfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedClinic, setSelectedClinic] = useState("stmarys");
@@ -187,7 +186,7 @@ export default function DentalPortfolio() {
         <div className="max-w-full px-4 sm:px-6 lg:px-12">
           <div className="flex justify-between items-center py-4">
             <div>
-              <h1 className="md:text-4xl  sm:text-[15rem]  font-bold text-[#2B2B25]">
+              <h1 className="lg:text-4xl md:text-2xl text-xl  font-bold text-[#2B2B25]">
                 Dr. Nithin's Dental Care
               </h1>
               <p className="text-sm text-[#2B2B25]">
@@ -285,13 +284,12 @@ export default function DentalPortfolio() {
             pauseDuration={1500}
             showCursor={true}
             cursorCharacter="|"
-            className="text-6xl sm:text-5xl font-bold mb-4"
+            className="md:text-6xl text-[1.5rem] font-bold mb-4"
           />
           {/* <h2 className="text-4xl sm:text-5xl font-bold mb-4">Your Smile, Our Priority</h2> */}
-          <p className="font-semibold text-xl  text-teal-50">
+          <p className="font-semibold text-[.9rem] md:text-xl  text-teal-50">
             Comprehensive dental care across two premium locations
-          </p>
-          <p className="font-semibold text-xl mb-12 text-teal-50">
+         <br />
             Comprehensive dental care
           </p>
           <a
@@ -347,9 +345,9 @@ export default function DentalPortfolio() {
       </section>
 
       <section className="bg-gray-100 flex flex-col items-center py-5 ">
-        <div className=" py-5 flex flex-row justify-evenly w-full  gap-5 ">
+        <div className=" py-5 flex flex-col md:flex-row justify-evenly  border w-full  gap-5 ">
           {icons.map((iconObj, index) => (
-            <div key={index} className="flex flex-row gap-4 ">
+            <div key={index} className="flex flex-row gap-4  justify-center ">
               <img src={iconObj.icon} alt="" className="w-18 h-18" />
               <div className="flex flex-col justify-between">
                 {/* <h1 className='text-4xl font-bold text-[#2B2B25]'>{iconObj.number}</h1> */}
@@ -433,7 +431,7 @@ export default function DentalPortfolio() {
           <div className="flex justify-center mb-8 space-x-4">
             <button
               onClick={() => setSelectedClinic("stmarys")}
-              className={`px-6 text-xl py-3 rounded-lg  transition ${
+              className={`px-6 text:2xl  md:text-xl py-3 rounded-lg  transition ${
                 selectedClinic === "stmarys"
                   ? "bg-[#5F5F55] text-white font-bold"
                   : "bg-white text-gray-700 hover:bg-gray-100 font-semibold"
@@ -443,7 +441,7 @@ export default function DentalPortfolio() {
             </button>
             <button
               onClick={() => setSelectedClinic("clove")}
-              className={`px-6 text-xl py-3 rounded-lg transition ${
+              className={`px-6 md:text-xl py-3 rounded-lg transition ${
                 selectedClinic === "clove"
                   ? "bg-[#5F5F55] text-white font-bold"
                   : "bg-white text-gray-700 hover:bg-gray-100 font-semibold"
@@ -584,87 +582,98 @@ export default function DentalPortfolio() {
       {/* Contact Section */}
       {/* <section id="contact" className="py-16 bg-gradient-to-r from-[#5F5F55] to-blue-600 text-white"> */}
       <section id="contact" className="py-16 bg-[#2B2B25] text-white">
+       
         <div className=" max-w-full px-4 sm:px-6 lg:px-12 text-left">
+         
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+           
             Ready to Transform Your Smile?
           </h2>
           <p className="text-xl mb-8 text-teal-50">
+           
             Book your appointment at either of your convenient locations
           </p>
-          <div className="flex  justify-between ">
-          <div className="flex">
+          <div className="flex  flex-col lg:flex-row justify-between ">
+           
+            <div className="flex flex-col lg:flex-row gap-20 xl:gap-60 justify-between ">
+             
               <CircularText
                 text="Dr Nithins Dental Clinincs - "
                 onHover="speedUp"
                 spinDuration={20}
                 className="custom-class"
               />
-              <div className="border">
+              <div className="  flex flex-col justify-center mb-5 ">
+               
+                <div className="flex gap-4 ">
+                 
+                  <a
+                    href="#"
+                    className="flex h-10 w-10 lg:h-12 lg:w-12 xl:h-15 xl:w-15 items-center justify-center rounded-full border border-white text-white transition-colors duration-300 hover:bg-white hover:text-black"
+                  >
+                   
+                    <FaInstagram size={20} />
 
-
-      
-      <div className="flex gap-4">
-        <a
-          href="#"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white transition-colors duration-300 hover:bg-white hover:text-black"
-        >
-          <Instagram size={20} />
-        </a>
-
-        <a
-          href="#"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white transition-colors duration-300 hover:bg-white hover:text-black"
-        >
-          <Facebook size={20} />
-        </a>
-
-        <a
-          href="#"
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white transition-colors duration-300 hover:bg-white hover:text-black"
-        >
-          <Twitter size={20} />
-        </a>
-      </div>
-
-
+                  </a>
+                  <a
+                    href="#"
+                    className="flex h-10 w-10 lg:h-12 lg:w-12 xl:h-15 xl:w-15  items-center justify-center rounded-full border border-white text-white transition-colors duration-300 hover:bg-white hover:text-black"
+                  >
+                   
+                    <FaFacebookF size={20} />
+                  </a>
+                  <a
+                    href="#"
+                    className="flex h-10 w-10 lg:h-12 lg:w-12 xl:h-15 xl:w-15  items-center justify-center rounded-full border border-white text-white transition-colors duration-300 hover:bg-white hover:text-black"
+                  >
+                   
+                    <FaXTwitter size={20 } />
+                  </a>
+                </div>
               </div>
-          </div>
-          <div className="  min-w-2xl flex justify-between " > 
-            {/* adress1 */}
-            <div className="min-w-3xs   " >
-              <h6 className="mb-5 px-3">St.Mary's Clinic <br /> First floor, <br />PALACKTHADATHIL BUILDING,<br /> CENTRAL JUNCTION, KURAVILANGAD,<br /> PIN : 686633. <br /> 9447650452 | 6238044429</h6>
-           <a
-              href="tel:+919876543210"
-              className="bg-white text-[#2B2B25] px-8 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition"
-            >
-              Call St Mary's: +91 98765 43210
-            </a>
             </div>
-            {/* adress 2 */}
-            <div>
-              <h6 className="mb-5 px-3">Clove clinic <br /> FIRST FLOOR, <br />PALACKTHADATHIL BUILDING,<br /> CENTRAL JUNCTION, KURAVILANGAD,<br /> PIN : 686633. <br /> 9447650452 | 6238044429</h6>
-             <a
-              href="tel:+919876543211"
-              className="bg-white text-[#2B2B25] px-8 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition"
-            >
-              Call Clove: +91 98765 43211
-            </a>
-            </div>
+            <div className="  flex flex-col md:flex-row justify-between ">
+             
+              {/* adress1 */}
+              <div className="min-w-3xs mb-10">
+               
+                <h6 className="mb-5 px-3">
+                 
+                  St.Mary's Clinic <br /> First floor, <br /> PALACKTHADATHIL
+                  BUILDING, <br /> CENTRAL JUNCTION, KURAVILANGAD, <br /> PIN :
+                  686633. <br /> 9447650452 | 6238044429
+                </h6>
+                <a
+                  href="tel:+919876543210"
+                  className="bg-white text-[80%] text-[#2B2B25] px-6 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition"
+                >
+                 
+                  Call St Mary's: +91 98765 43210
+                </a>
+              </div>
+              {/* adress 2 */}
+              <div className="">
+               
+                <h6 className="mb-5 px-3  ">
+                 
+                  Clove clinic <br /> FIRST FLOOR, <br /> PALACKTHADATHIL
+                  BUILDING, <br /> CENTRAL JUNCTION, KURAVILANGAD, <br /> PIN :
+                  686633. <br /> 9447650452 | 6238044429
+                </h6>
+                <a
+                  href="tel:+919876543211"
+                  className="bg-white text-[80%] text-[#2B2B25] px-6 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition"
+                >
+                 
+                  Call Clove: +91 98765 43211
+                </a>
+              </div>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            {/* <a
-              href="tel:+919876543210"
-              className="bg-white text-[#2B2B25] px-8 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition"
-            >
-              Call St Mary's: +91 98765 43210
-            </a> */}
-            {/* <a
-              href="tel:+919876543211"
-              className="bg-white text-[#2B2B25] px-8 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition"
-            >
-              Call Clove: +91 98765 43211
-            </a> */}
+           
+            {/* <a href="tel:+919876543210" className="bg-white text-[#2B2B25] px-8 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition" > Call St Mary's: +91 98765 43210 </a> */}
+            {/* <a href="tel:+919876543211" className="bg-white text-[#2B2B25] px-8 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition" > Call Clove: +91 98765 43211 </a> */}
           </div>
         </div>
       </section>
