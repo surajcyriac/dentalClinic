@@ -682,13 +682,13 @@ export default function DentalPortfolio() {
                   Clove Dental Clinic
                   <br /> First floor, <br /> Palachthadathil Building <br />{" "}
                   Central junction , Kuravilangad, <br /> Pin: 686633. <br />{" "}
-                  9447650452
+                  8075464246 ,9605149854
                 </h6>
                 <a
                   href="tel:+919876543210"
                   className="bg-white text-[80%] text-[#2B2B25] px-6 py-3 rounded-full font-semibold hover:bg-[#e3e3e0] transition "
                 >
-                  Call Clove: +91 9447650452
+                  Call Clove: +91 8075464246 
                 </a>
               </div>
               {/* adress 2 */}

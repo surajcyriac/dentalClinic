@@ -216,7 +216,7 @@ const json = {
       "name": "Dr. Nithin's Clove Clinic",
       "address":
         "Clove Dental Clinic , First floor, Palachthadathil  Building , Central junction , Kuravilangad,Pin:  686633.",
-      "phone": "+91 9447650452",
+      "phone": "+91 8075464246",
       "workingDays": "Mon - Sat",
        "workingHours": "9:00 AM - 7:00 PM",
       "email": "info@clovedentalkuravilangad.com",
