@@ -283,6 +283,16 @@ export default function DentalPortfolio() {
           <div className="w-24 h-1 bg-[#5F5F55] mx-auto mb-12"></div>
           {/* Clinic Tabs */}
           <div className="flex justify-center mb-8 space-x-4">
+              <button
+              onClick={() => setSelectedClinic("clove")}
+              className={`px-6 md:text-xl py-3 rounded-lg transition ${
+                selectedClinic === "clove"
+                  ? "bg-[#5F5F55] text-white font-bold"
+                  : "bg-white text-gray-700 hover:bg-gray-100 font-semibold"
+              }`}
+            >
+              Clove Clinic
+            </button>
             <button
               onClick={() => setSelectedClinic("stmarys")}
               className={`px-6 text:2xl  md:text-xl py-3 rounded-lg  transition ${
@@ -293,16 +303,7 @@ export default function DentalPortfolio() {
             >
               St Mary's Dental Clinic
             </button>
-            <button
-              onClick={() => setSelectedClinic("clove")}
-              className={`px-6 md:text-xl py-3 rounded-lg transition ${
-                selectedClinic === "clove"
-                  ? "bg-[#5F5F55] text-white font-bold"
-                  : "bg-white text-gray-700 hover:bg-gray-100 font-semibold"
-              }`}
-            >
-              Clove Clinic
-            </button>
+          
           </div>
 
           {/* Clinic Details */}
@@ -359,11 +360,15 @@ export default function DentalPortfolio() {
             <div>
               <h4 className="text-xl font-bold text-[#2B2B25] mb-4 flex items-center">
                 <Calendar className="mr-2 text-[#5F5F55]" size={24} />
-                Doctor's Schedule
+                Consulting specialists
               </h4>
               <div className="space-y-4 vertical-scroll max-h-72 overflow-y-scroll ">
                 {/* {clinics[selectedClinic].doctors.map((doctor, idx) => ( */}
-                {experts.map((expert, idx) => (
+                {experts
+    .filter(
+      (expert) =>
+        expert.place === "common" || expert.place === selectedClinic
+    ).map((expert, idx) => (
                   <div
                     key={idx}
                     className="border border-gray-200  rounded-lg p-4 hover:border-[#5F5F55] transition"
@@ -733,7 +738,7 @@ export default function DentalPortfolio() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/919605149854?text=Hi%2C%20I%20am%20interested%20in%20your%20service"
+        href="https://wa.me/919074287644?text=Hi%2C%20I%20am%20interested%20in%20your%20service"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center group"

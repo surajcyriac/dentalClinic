@@ -24,6 +24,7 @@ const json = {
       "specialization": "Cheif Dental Surgeon",
       "qualification": "BDS",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Dr. Nithin Neeps is the Chief Dental Surgeon and founder of our clinics in Kuravilangad and Ayarkunnam, Kottayam. Known for his expertise in general and cosmetic dentistry, he focuses on delivering painless, high-quality treatments tailored to each patient. With a strong reputation as one of the most trusted dentists in Kottayam, Dr. Nithin combines advanced techniques with compassionate care to help patients achieve healthy, confident smiles.",
       "image":
@@ -34,6 +35,7 @@ const json = {
       "specialization": "Endodontics",
       "qualification": "BDS, MDS (Endodontics)",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Dr. Athul Bharat is an experienced endodontist specializing in advanced root canal therapy, retreatments, and microsurgical procedures. Serving patients at our Kuravilangad and Ayarkunnam clinics, he is known for using CBCT-guided diagnosis and modern rotary technology to preserve natural teeth. For anyone searching for an expert root canal specialist in Kottayam, Dr. Athul offers predictable, comfortable, and long-lasting results.",
       "image":
@@ -44,6 +46,7 @@ const json = {
       "specialization": "Endodontics",
       "qualification": "BDS, MDS (Orthodontics)",
       "experience": "6+ years",
+      "place":"common",
       "description":
         "Dr. Amal Devadas is a skilled endodontist offering precision-driven root canal treatments, retreatments, and restorative procedures. His gentle and detail-focused approach ensures patients experience maximum comfort during treatment. Patients looking for reliable root canal treatment in Kuravilangad or Ayarkunnam often choose Dr. Amal for his expertise and patient-first care.",
       "image":
@@ -54,8 +57,20 @@ const json = {
       "specialization": "Orthodontics",
       "qualification": "BDS, MDS (Orthodontics)",
       "experience": "6+ years",
+      "place":"common",
       "description":
         "Dr. Arun Joseph is an orthodontist specializing in braces and clear aligners, helping patients achieve well-aligned, confident smiles. He creates personalized orthodontic plans using advanced techniques, making him a preferred choice for orthodontic care in Kottayam. Whether patients need metal braces, ceramic braces, or clear aligners, Dr. Arun delivers safe and effective results at both clinic locations.",
+      "image":
+        "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop",
+    },
+    {
+      "name": "Dr. shijo Davis MDS",
+      "specialization": "Orthodontics",
+      "qualification": "BDS, MDS (Orthodontics)",
+      "experience": "6+ years",
+      "place":"common",
+      "description":
+        "Dr. shijo Davis is an orthodontist specializing in braces and clear aligners, helping patients achieve well-aligned, confident smiles. He creates personalized orthodontic plans using advanced techniques, making him a preferred choice for orthodontic care in Kottayam. Whether patients need metal braces, ceramic braces, or clear aligners, Dr. Arun delivers safe and effective results at both clinic locations.",
       "image":
         "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop",
     },
@@ -64,6 +79,7 @@ const json = {
       "specialization": "Oral and Maxillofacial Surgery",
       "qualification": "BDS, MDS (Oral and Maxillofacial Surgery)",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Dr. Vineeth John is an experienced oral and maxillofacial surgeon providing expert care for procedures involving the mouth, jaw, and facial region. Patients from Kuravilangad, Ayarkunnam, and nearby Kottayam areas trust him for safe, precise surgical care. His focus on patient comfort and advanced surgical planning ensures successful outcomes for complex cases.",
       "image":
@@ -74,6 +90,7 @@ const json = {
       "specialization": "Oral and Maxillofacial Surgery",
       "qualification": "BDS, MDS (Oral and Maxillofacial Surgery)",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Specializing in oral and maxillofacial surgery, Dr. Afzal Ahmmed offers skilled surgical management for teeth, gums, jaws, and facial bone structures. His compassionate approach and surgical accuracy make him a strong choice for patients seeking safe oral surgery in Kottayam, especially in the Kuravilangad and Ayarkunnam regions.",
       "image":
@@ -84,6 +101,7 @@ const json = {
       "specialization": "Prosthodontics and Implantology",
       "qualification": "BDS, MDS (Prosthodontics and Implantology)",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Dr. Minu Philipose specializes in prosthodontics and implantology, offering solutions such as crowns, dentures, bridges, full-mouth rehabilitation, and dental implants. Patients looking for dental implants in Kottayam trust her for her precision, aesthetic sense, and commitment to restoring natural function. She provides personalized care at both our clinic locations.",
       "image":
@@ -94,6 +112,7 @@ const json = {
       "specialization": "Periodontics and Implantology",
       "qualification": "BDS, MDS (Periodontics and Implantology)",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Dr. Aravind P is a specialist in gum disease treatment and implant dentistry. He provides comprehensive periodontal therapy, advanced gum care, and long-lasting implant solutions. Patients in Kuravilangad and Ayarkunnam appreciate his calm approach and modern treatment methods, making him a leading choice for gum treatment in Kottayam.",
       "image":
@@ -104,16 +123,18 @@ const json = {
       "specialization": "Conservative Dentistry and Endodontics",
       "qualification": "BDS, MDS (Conservative Dentistry and Endodontics)",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Dr. Jithin Jose focuses on preserving natural teeth through conservative dentistry, restoration work, and painless root canal treatment. His precise, minimally invasive methods make him a trusted endodontist in Kottayam, especially for patients near Kuravilangad and Ayarkunnam seeking comfortable, effective dental care.",
       "image":
         "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=400&h=400&fit=crop",
     },
     {
-      "name": "Dr. Amritha V.D MDS",
+      "name": "Dr. Amritha V.S MDS",
       "specialization": "Paedodontics",
       "qualification": "BDS, MDS (Paedodontics)",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Dr. Amritha is a caring pediatric dentist dedicated to providing gentle, stress-free dental care for children. She helps young patients build positive dental habits, making her a preferred choice for kids' dental care in Kottayam. Families from Kuravilangad and Ayarkunnam trust her for her patience, compassion, and child-friendly treatment approach.",
       "image":
@@ -124,6 +145,7 @@ const json = {
       "specialization": "Oral Medicine and Radiology",
       "qualification": "BDS, MDS (Oral Medicine and Radiology)",
       "experience": "5+ years",
+      "place":"common",
       "description":
         "Dr. Akshaya specializes in diagnosing and managing oral diseases using advanced imaging and radiographic techniques. Patients from Kottayam and the surrounding areas rely on her for accurate oral assessments and long-term care planning. Her expertise ensures precise diagnosis for complex dental conditions.",
       "image":
@@ -134,6 +156,7 @@ const json = {
       "specialization": "Resident Dental Surgeon",
       "qualification": "BDS",
       "experience": "Resident",
+      "place":"clove",
       "description":
         "Dr. Bilja Biju is a dedicated resident dental surgeon offering comprehensive general dental care. She is passionate about continuous learning and modern treatment practices. Patients visiting our clinics in Kuravilangad and Ayarkunnam appreciate her gentle approach and commitment to comfort-focused dentistry.",
       "image":
@@ -144,6 +167,7 @@ const json = {
       "specialization": "Resident Dental Surgeon",
       "qualification": "BDS",
       "experience": "Resident",
+      "place":"stmarys",
       "description":
         "Dr. Soumya Xavier provides compassionate, high-quality general dentistry services and ensures a comfortable experience for every patient. Her focus on modern techniques and patient education makes her a dependable choice for families seeking reliable dental care in Kottayam, especially around Kuravilangad and Ayarkunnam.",
       "image":

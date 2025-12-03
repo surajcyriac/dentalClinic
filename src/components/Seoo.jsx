@@ -326,7 +326,7 @@ export default function SEO() {
   return (
     <Helmet>
       {/* Basic SEO meta — change as needed */}
-      <title>Best Dental Clinics in Kottayam | Kuravilangad & Ayarkunnam</title>
+      <title>Dr Nithin"s Dental Care in Kottayam | Kuravilangad & Ayarkunnam</title>
       <meta
         name="description"
         content="St Mary's Dental Clinic & Dr. Nithin's Clove Clinic — Expert dentists serving Kuravilangad and Ayarkunnam, Kottayam. Root canal, implants, braces, pediatric dentistry."
